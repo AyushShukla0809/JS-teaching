@@ -8,3 +8,8 @@ console.log(typeof(null))
 // null is a data type and it is said as standalone value
 console.log(typeof(undefined));
 // value is not assigned that will be undefined
+
+// OPERATION IN DATATYPE
+let a="asdf";
+let b="qwsad";
+console.log(a+b);
