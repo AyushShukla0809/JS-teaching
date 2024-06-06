@@ -32,8 +32,20 @@ console.log("H");
  console.log("second");
 //  console.log("2",res);
 // console.log('Result of the function is ${res}');
-
+// function LoginMessage(UserName="DefaultName") // It will print in case of undefined value means when no value is passed inside function
 function LoginMessage(UserName){
-return '${UserName} is recently logged in'
+  // To counter undefined values when no arguments is passed
+  // if(!UserName){} // It is same as below condition
+  // As undefined is taken as FALSE and !undefined will be taken as TRUE
+  if(UserName === undefined){
+    console.log("Enter the message in function")
+    return; // it is used to control further statements 
+  }
+  // if above block is satisfied then below statemnt will not get executed.
+return `${UserName} is recently logged in`;
 }
-console.log(LoginMessage("Hitesh"))
+console.log(LoginMessage("Hitesh"));
+console.log(LoginMessage()); // will print UNDEFINED if no value is passed
+// let le = LoginMessage("Hitesh");
+// console.log(le); // will function in same
+console.log("GOING");
