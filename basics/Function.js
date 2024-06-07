@@ -49,3 +49,36 @@ console.log(LoginMessage()); // will print UNDEFINED if no value is passed
 // let le = LoginMessage("Hitesh");
 // console.log(le); // will function in same
 console.log("GOING");
+
+// ... rust Operator'
+function CalculateCartPrice(...num1){ // without rust operator (...) it will return only first value of arguments
+  // function CalculateCartPrice(val1,val2, ... num1){
+  // return num1
+  // Output 300,400 As 100 200 get now into val1 val2}
+  return num1;
+}
+console.log(CalculateCartPrice(100,200,300,400)); // Before  Output 100,200,300,400 After OUTPUT 300,400
+ // Function Having Objects as Parameter
+ //Create Object
+ console.log("Ob1");
+ const usertypes = {
+  names : "pizza",
+  price : 249
+ }
+//  can also be done directly as :>  handlejob({
+// names : "Pizza",
+// price : 249
+// })
+ function handleObject(anyObject){
+  console.log(`User Name is ${anyObject.names} and Price is of ${anyObject.price}`)
+ }
+ handleObject(usertypes);
+ console.log("Ob2");
+ // Undefined Output is not preferred , JavaScript uses more statements to restrict Undefined thats why typescript is used in some place of javascript 
+ const myArray=[110,220,330,440]
+ function returnArray(anyArrayName){
+  return anyArrayName[1];
+ }
+ console.log(returnArray(myArray));
+  // Can also be done without creating array variable , like
+    console.log(returnArray([100,200,300,400])); // Understand it
